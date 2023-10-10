@@ -1,0 +1,5 @@
+export * from './Header/Header'
+export * from './Profile/Profile'
+export * from './Menu/Menu'
+export * from './Footer/Footer'
+export * from './ProfilePost/ProfilePost'
