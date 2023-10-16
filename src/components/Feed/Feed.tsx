@@ -20,7 +20,7 @@ export const Feed = () => {
     name: "Diogo ✨", 
     date: "27 Set 2023", 
     imageProfilePic:"https://firebasestorage.googleapis.com/v0/b/galeriadefotos-bd42d.appspot.com/o/profile.jpg?alt=media&token=38662564-570f-4d05-b1f9-14174afac204", 
-    mood:"🙌 Excited", 
+    mood:"🙌 Animado", 
     paragraph: <><F.Title>Modelo 3D</F.Title>
     <G.Paragraph fs="16px">Como eu criei uma função para ditar os movimentos de um modelo 3D do minecraft.</G.Paragraph></>,
     image:undefined, 

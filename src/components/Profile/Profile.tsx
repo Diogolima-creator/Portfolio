@@ -21,7 +21,7 @@ export const Profile = ({menuSelected, setMenuSelected}:ProfileProps) => {
     {"icon":<CalendarMonthIcon className="iconSocial"/>, "text": "Entrou Out 2023"}
   ]
 
-  const menu = ['Início', 'Sobre', 'Conteudo', 'Guestbook']
+  const menu = ['Início', 'Sobre', 'Conteudo']
 
   return (
     <P.Profile>
@@ -58,6 +58,9 @@ export const Profile = ({menuSelected, setMenuSelected}:ProfileProps) => {
               <G.Paragraph className={key === menuSelected ? 'selected' : key.toString()} fs="16px" fw="bold">{item}</G.Paragraph>
             </P.MenuItem>
           ))}
+          <P.MenuItem className="disabled">
+              <G.Paragraph  fs="16px" fw="bold">Indicações</G.Paragraph>
+          </P.MenuItem>
         </P.MenuSelect>
       </P.ProfileDate>
     </P.Profile>

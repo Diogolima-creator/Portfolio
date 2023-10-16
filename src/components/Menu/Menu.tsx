@@ -12,7 +12,6 @@ export const Menu = ({menuSelected}:MenuProps) => {
       {menuSelected === 0 && <Feed/>}
       {menuSelected === 1 && <About/>}
       {menuSelected === 2 && <Content/>}
-      {menuSelected === 3 && <div>OI3</div>}
     </M.Container>
   )
 }

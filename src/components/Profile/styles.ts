@@ -170,6 +170,10 @@ export const MenuSelect = styled.div`
   display:flex;
   height:50px;
   align-items:center;
+
+  .disabled{
+    opacity:0.1;
+  }
 `;
 
 export const MenuItem = styled.div`
