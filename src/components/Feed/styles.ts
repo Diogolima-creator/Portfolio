@@ -6,6 +6,20 @@ export const Container = styled.div`
   flex-direction:column;
   height:100%;
   width:100%;
+
+  a{
+    text-decoration:none;
+    color:hsl(320 100% 60%);
+    font-weight:bold;
+    cursor:pointer;
+    font-style:italic;
+    font-size:15px;
+    
+    &:hover{
+      text-decoration:2px underline;
+     }
+  }
+
 `;
 
 export const Posts = styled.div`

@@ -7,18 +7,18 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 export const Footer = () => {
 
   const socials = [
-    <TwitterIcon className="icon" />,
-    <InstagramIcon className="icon" />,
-    <GitHubIcon className="icon" />,
-    <LinkedInIcon className="icon" />
+    {"icon":<TwitterIcon className="icon" />},
+    {"icon":<InstagramIcon className="icon" />, "link": "https://www.instagram.com/diogodevlima/"},
+    {"icon":<GitHubIcon className="icon" />, "link": "https://github.com/Diogolima-creator"},
+    {"icon":<LinkedInIcon className="icon" />, "link": "https://www.linkedin.com/in/diogo-lima1408/"}
   ]
 
   return (
     <F.Container>
       <F.SocialsText>
         <F.Socials>
-            {socials.map((icon) => (
-              icon
+            {socials.map((item) => (
+              <a href={item.link} target='_blank'>{item.icon}</a>
             ))}
         </F.Socials>
         <F.Text>
