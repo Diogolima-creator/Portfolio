@@ -25,7 +25,8 @@ export const Profile = ({menuSelected, setMenuSelected}:ProfileProps) => {
 
   return (
     <P.Profile>
-      <P.Banner>
+      <P.Banner autoPlay muted>
+        <source src="mario.mp4" type="video/mp4"/>
       </P.Banner>
       <P.ProfileDate>
         <P.ProfileHeader>

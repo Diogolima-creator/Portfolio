@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const Profile = styled.div`
     width:40%;
-    height:700px;
     z-index:1;
     margin-top:52px;
     
@@ -53,13 +52,13 @@ export const Profile = styled.div`
 
 `;
 
-export const Banner = styled.div`
-   height:250px;
-   background-color:#D1E6FA;
+export const Banner = styled.video`
+   height:60%;
+   width:100%;
 `;
 
 export const ProfileDate = styled.div`
-   height:450px;
+   height:100%;
    display:flex;
    flex-direction:column;
    width:100%;
