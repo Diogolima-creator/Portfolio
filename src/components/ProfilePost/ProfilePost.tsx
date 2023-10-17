@@ -244,7 +244,8 @@ export const ProfilePost = () => {
   return (
     <>
     <P.Profile>
-      <P.Banner>
+      <P.Banner autoPlay muted loop>
+        <source src="../mario.mp4" type="video/mp4"/>
       </P.Banner>
       <P.ProfileDate>
         <P.ProfileHeader>
