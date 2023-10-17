@@ -36,6 +36,30 @@ export const Posts = styled.div`
   &:hover{
     background-color: rgba(255,255,255,0.1);
   }
+
+  @media screen and (max-width: 1600px) {
+    width:36.5%;
+  }
+
+  @media screen and (max-width: 1366px) {
+    width:41.5%;
+  }
+
+  @media screen and (max-width: 1024px) {
+    width:46.5%;
+  }
+
+  @media screen and (max-width: 768px) {
+    width:51.5%;
+  }
+
+  @media screen and (max-width: 480px) {
+    width:80%;
+  }
+
+  @media screen and (max-width: 320px) {
+    width:100%;
+  }
 `;
 
 type PostType = {

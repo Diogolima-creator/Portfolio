@@ -17,6 +17,30 @@ export const Profile = styled.div`
       width:22px;
       height:22px;
     }
+
+    @media screen and (max-width: 1600px) {
+      width:45%;
+    }
+  
+    @media screen and (max-width: 1366px) {
+      width:50%;
+    }
+  
+    @media screen and (max-width: 1024px) {
+      width:60%;
+    }
+
+    @media screen and (max-width: 768px) {
+      width:70%;
+    }
+  
+    @media screen and (max-width: 480px) {
+      width:100%;
+    }
+  
+    @media screen and (max-width: 320px) {
+      width:100%;
+    }
 `;
 
 export const Banner = styled.div`
@@ -115,6 +139,30 @@ export const ProfilePostContent = styled.div`
   margin-top:40px;
   display:flex;
   align-items:center;
+
+  @media screen and (max-width: 1600px) {
+    width:45%;
+  }
+
+  @media screen and (max-width: 1366px) {
+    width:50%;
+  }
+
+  @media screen and (max-width: 1024px) {
+    width:60%;
+  }
+
+  @media screen and (max-width: 768px) {
+    width:70%;
+  }
+
+  @media screen and (max-width: 480px) {
+    width:100%;
+  }
+
+  @media screen and (max-width: 320px) {
+    width:90%;
+  }
 `;
 
 export const Post = styled.div`

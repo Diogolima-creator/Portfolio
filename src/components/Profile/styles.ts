@@ -17,6 +17,40 @@ export const Profile = styled.div`
       width:22px;
       height:22px;
     }
+
+    @media screen and (max-width: 1600px) {
+      width:45%;
+    }
+
+    @media screen and (max-width: 1366px) {
+      width:50%;
+    }
+
+    @media screen and (max-width: 1024px) {
+      width:60%;
+    }
+
+    @media screen and (max-width: 768px) {
+      .iconSocial{
+        color:#868E96;
+        width:18px;
+        height:18px; 
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      width:100%;
+    }
+
+
+    @media screen and (max-width: 320px) {
+      .iconSocial{
+        color:#868E96;
+        width:16px;
+        height:16px; 
+      }
+    }
+
 `;
 
 export const Banner = styled.div`
@@ -49,6 +83,18 @@ export const Title = styled.h1`
     margin:0;
     font-size:42px;
     color:white;
+
+    @media screen and (max-width: 768px) {
+      font-size:32px;
+    }
+
+    @media screen and (max-width: 480px) {
+      font-size:24px;
+    }
+
+    @media screen and (max-width: 320px) {
+      font-size:20px;
+    }
 `;
 
 
@@ -101,8 +147,21 @@ export const ProfileButton = styled.button`
   transition:.15s;
   display:flex;
   align-items:center;
+
   &:hover{
     border:3px solid white;
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size:14px;
+  }
+
+  @media screen and (max-width: 480px) {
+    font-size:14px;
+  }
+
+  @media screen and (max-width: 320px) {
+    font-size:14px;
   }
 `;
 
@@ -120,6 +179,18 @@ export const EmailContent = styled.div`
   flex-direction:column;
   justify-content:center;
   width:65%;
+
+  @media screen and (max-width: 768px) {
+    width:75%;
+  }
+
+  @media screen and (max-width: 480px) {
+    width:80%;
+  }
+
+  @media screen and (max-width: 320px) {
+    width:100%;
+  }
 `;
 
 export const EmailInput = styled.div`
@@ -145,6 +216,18 @@ export const Input = styled.input`
     outline:2px solid white;
     margin-right:1px;
   }
+
+  @media screen and (max-width: 768px) {
+    font-size:15px;
+  }
+
+  @media screen and (max-width: 480px) {
+    font-size:15px;
+  }
+
+  @media screen and (max-width: 320px) {
+    font-size:15px;
+  }
 `;
 
 export const Button = styled.button`
@@ -161,6 +244,14 @@ export const Button = styled.button`
 
   &:hover{
     border:3px solid white;
+  }
+
+  @media screen and (max-width: 480px) {
+    font-size:12px;
+  }
+
+  @media screen and (max-width: 320px) {
+    font-size:12px;
   }
 `;
 

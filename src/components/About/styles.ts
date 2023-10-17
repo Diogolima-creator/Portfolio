@@ -16,6 +16,26 @@ export const About = styled.div`
   p{
     text-align: justify-all;
   }
+
+  @media screen and (max-width: 1600px) {
+    width:36.5%;
+  }
+
+  @media screen and (max-width: 1366px) {
+    width:41.5%;
+  }
+
+  @media screen and (max-width: 768px) {
+    width:43.5%;
+  }
+
+  @media screen and (max-width: 480px) {
+    width:80%;
+  }
+
+  @media screen and (max-width: 320px) {
+    width:90%;
+  }
 `;
 
 export const Image = styled.img`

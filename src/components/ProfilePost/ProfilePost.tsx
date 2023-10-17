@@ -155,7 +155,7 @@ export const ProfilePost = () => {
   { postTitle: "Finanças", post:  
   <P.Post>
     <G.Paragraph margin='10px 0' fw="bold" fs="25px">Finanças</G.Paragraph>
-    <G.Paragraph margin='10px 0' fw="500" fs="16px">👉<a href="https://ncsm.com.br" target='_blank'>Clique aqui para fazer uma visita</a>👈</G.Paragraph>
+    <G.Paragraph margin='10px 0' fw="500" fs="16px">👉<a href="finan-front.vercel.app" target='_blank'>Clique aqui para fazer uma visita</a>👈</G.Paragraph>
     <G.Paragraph margin='10px 0' fw='bold' fStyle='italic'>Visão Geral</G.Paragraph>
     <G.Paragraph fs="16px" margin='3px 0'>Este foi um projeto que fiz com o intuito de organizar as finanças de casa e funcionou muito bem apesar de nao estar completo, a ideia do projeto era um 
     app com sistema de finanças somado a ideia de rede social.</G.Paragraph>

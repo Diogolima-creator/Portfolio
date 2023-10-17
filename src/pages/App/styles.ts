@@ -18,6 +18,16 @@ export const Img = styled.img`
   width:600px;
   height:600px;
   z-index:1;
+
+  @media screen and (max-width: 1366px) {
+    width:450px;
+    height:450px;
+  }
+
+  @media screen and (max-width: 1024px) {
+    width:300px;
+    height:300px;
+  }
 `;
 
 export const Img2 = styled.img`
