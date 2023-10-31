@@ -1,7 +1,8 @@
 import styled from 'styled-components';
+import * as T from '../../pages/App/types';
 
-export const Header = styled.div`
-  background-color:rgba(21, 24, 28, .3);
+export const Header = styled.div<T.ContainerProps>`
+  background-color: ${props => props.DarkTheme === 'dark' ? 'rgba(21, 24, 28, .3)' : 'rgba(0, 0, 0, 0.1)'};
   width:100%;
   height:52px;
   position:fixed;

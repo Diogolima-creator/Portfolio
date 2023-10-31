@@ -1,6 +1,7 @@
 import styled from "styled-components"
+import * as T from "../../pages/App/types";
 
-export const Container = styled.div`
+export const Container = styled.div<T.ContainerProps>`
   width:100%;
   height:80px;
   margin-top:40px;
@@ -13,9 +14,10 @@ export const Container = styled.div`
     width:24px;
     height:24px;
     padding:8px;
-    color:#ADB5BD;
+    color:${props => props.DarkTheme === 'dark' ? '#ADB5BD' : 'black'};
     cursor:pointer;
     transition: .3s;
+
     &:hover{
       border-radius:5px;
       background-color: rgba(255,255,255, .3);

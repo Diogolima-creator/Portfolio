@@ -6,13 +6,15 @@ import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
 import LinkIcon from '@mui/icons-material/Link';
 import CakeIcon from '@mui/icons-material/Cake';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
-
+import { DarkThemeEnum } from '../../pages/App/types';
 
 type ProfileProps = {
   menuSelected: number
   setMenuSelected:React.Dispatch<React.SetStateAction<number>>
+  DarkThemeProps: keyof typeof DarkThemeEnum
 }
-export const Profile = ({menuSelected, setMenuSelected}:ProfileProps) => {
+
+export const Profile = ({menuSelected, setMenuSelected, DarkThemeProps}:ProfileProps) => {
 
   const socials = [
     {"icon":<BusinessCenterIcon className="iconSocial"/>, "text": "Disponivel"},
@@ -24,7 +26,7 @@ export const Profile = ({menuSelected, setMenuSelected}:ProfileProps) => {
   const menu = ['Início', 'Sobre', 'Conteudo']
 
   return (
-    <P.Profile>
+    <P.Profile DarkTheme={DarkThemeProps}>
       <P.Banner autoPlay muted>
         <source src="mario.mp4" type="video/mp4"/>
       </P.Banner>

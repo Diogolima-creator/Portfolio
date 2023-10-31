@@ -8,7 +8,7 @@ export const Mood = ({mood}: MoodProps) => {
 
   return (
     <M.Mood>
-        <G.Paragraph fs='14px' fw='bold'>{mood}</G.Paragraph>
+        <G.Paragraph fs='14px' fw='bold'><span>{mood}</span></G.Paragraph>
     </M.Mood>
   )
 }

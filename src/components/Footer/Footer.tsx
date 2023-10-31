@@ -3,8 +3,13 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import { DarkThemeEnum } from '../../pages/App/types';
 
-export const Footer = () => {
+type FooterProps = {
+  DarkThemeProps: keyof typeof DarkThemeEnum
+}
+
+export const Footer = ({DarkThemeProps}:FooterProps) => {
 
   const socials = [
     {"icon":<TwitterIcon className="icon" />},
@@ -14,7 +19,7 @@ export const Footer = () => {
   ]
 
   return (
-    <F.Container>
+    <F.Container DarkTheme={DarkThemeProps}>
       <F.SocialsText>
         <F.Socials>
             {socials.map((item) => (

@@ -1,10 +1,19 @@
 import styled from 'styled-components';
+import * as T from '../../pages/App/types';
 
-export const Profile = styled.div`
+export const Profile = styled.div<T.ContainerProps>`
     width:40%;
     z-index:1;
     margin-top:52px;
     
+    h1{
+      color:${props => props.DarkTheme === 'dark' ? 'white' : 'black'};
+    }
+
+    p{
+      color:${props => props.DarkTheme === 'dark' ? 'white' : 'black'};
+    }
+
     .icon{
       margin-left:5px;
       width:18px;

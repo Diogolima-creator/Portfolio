@@ -7,6 +7,9 @@ export const Mood = styled.div`
   margin-top:2px;
   text-align:center;
   display:flex;
-  
+
+  span{
+    color:white;
+  }
 `;
 
