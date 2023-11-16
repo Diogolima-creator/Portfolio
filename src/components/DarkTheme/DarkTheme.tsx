@@ -18,7 +18,7 @@ export const DarkTheme = ({setDarkTheme}:DarkThemeProps) => {
   return (
     <D.Container>
       {(darkTheme === 'dark') ? 
-      <LightModeIcon onClick={()=>handleDarkTheme('light')} className="icon" sx={{ color: 'white'}}/>: 
+      <LightModeIcon onClick={()=>handleDarkTheme('light')} className="icon" sx={{ color: 'white'}}/> : 
       <NightsStayIcon onClick={()=>handleDarkTheme('dark')} className="icon" sx={{ color: 'grey'}}/>}
     </D.Container>
   )
