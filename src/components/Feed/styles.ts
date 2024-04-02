@@ -87,6 +87,7 @@ export const PostProfilePic = styled.img`
   height:40px;
   width:40px;
   border-radius:45px;
+  object-fit:cover;
 `;
 
 export const NameDateAndMood = styled.div`
@@ -109,6 +110,19 @@ export const NameDate = styled.div`
 
 export const PostText = styled.div`
   width:100%;
+
+  span{
+    font-size:16px;
+    font-weight:700;
+    cursor:pointer;
+    text-decoration:underline;
+    color:hsl(320 100% 60%);
+    transition:0.3s;
+
+    &:hover{
+      opacity:.5;
+    }
+  }
 `;
 
 export const Title = styled.h1`

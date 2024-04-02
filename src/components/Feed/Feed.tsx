@@ -2,11 +2,21 @@ import { Pinned } from './components/Pinned/Pinned'
 import * as F from './styles'
 import * as G from '../../globalStyles/globalStyles'
 import { Mood } from './components/Mood/Mood'
+import { useNavigate } from 'react-router-dom'
 
 export const Feed = () => {
-  
+  const navigate = useNavigate()
   const posts = [
     { isPinned: true, name: "Diogo ✨", 
+    date: "02 Abr 2024", 
+    imageProfilePic:"profile2.jpg", 
+    mood:"🔥Sentindo Animado", 
+    paragraph: <><F.Title>Dia de atualização</F.Title>
+    <G.Paragraph fs="16px">Atualizações para o novo projeto <span onClick={()=> navigate('/post/Voice IA ⭐', { state: {key: 'feed'}})}>/VoiceIA</span>, troca da foto de perfil, 
+    e logo mais novidades para o projeto SportsAPI</G.Paragraph></>,
+    image:"https://firebasestorage.googleapis.com/v0/b/galeriadefotos-bd42d.appspot.com/o/Captura%20de%20tela%202024-04-02%20121743.png?alt=media&token=9ee8f4db-77d4-44cb-bfa4-a2a27f1f3db2"
+    },
+    { isPinned: false, name: "Diogo ✨", 
     date: "06 Out 2023", 
     imageProfilePic:"https://firebasestorage.googleapis.com/v0/b/galeriadefotos-bd42d.appspot.com/o/profile.jpg?alt=media&token=38662564-570f-4d05-b1f9-14174afac204", 
     mood:"🌴Sentindo Descolado", 
