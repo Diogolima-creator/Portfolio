@@ -5,6 +5,7 @@ type ParagraphType = {
   color?: string
   fs?: string
   fw?: string
+  ta?: string
   fStyle?: string
 }
 
@@ -14,6 +15,12 @@ export const Paragraph = styled.p<ParagraphType>`
     font-weight:${props => props.fw ? props.fw : '300'};
     font-size:${props => props.fs ? props.fs : '18px'};
     font-style:${props => props.fStyle? props.fStyle : ''};
+    text-align:${props => props.ta ? props.ta : ''};
+
+    li{
+      text-align:center;
+      margin:5px 0;
+    }
 
     @media screen and (max-width: 768px) {
       font-size:${props => props.fs ? `calc(${props.fs} - 2px)` : '16px'};

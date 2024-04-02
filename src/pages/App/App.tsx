@@ -2,9 +2,12 @@ import * as A from './styles'
 import { Header, Profile, Menu, Footer } from '../../components'
 import { useState } from 'react'
 import { getDarkTheme } from '../../http/localStorage/localStorage'
+import { useParams } from 'react-router-dom';
 
 export const App = () => {
-  const [menuSelected, setMenuSelected] = useState(0)
+
+  const { content } = useParams()
+  const [menuSelected, setMenuSelected] = useState(content === 'about' ? 1 : content === 'content' ? 2 : 0 )
   const [darkTheme, setDarkTheme] = useState(getDarkTheme())
 
   return(

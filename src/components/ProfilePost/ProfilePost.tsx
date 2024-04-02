@@ -5,15 +5,21 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import LocalOfferIcon from '@mui/icons-material/LocalOffer';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate, useLocation } from 'react-router-dom';
 import { PostComponent } from '../PostComponent/PostComponent';
+import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace';
+import { useState } from 'react';
 
 export const ProfilePost = () => {
 
   const { PostTitle } = useParams()
+  const navigate = useNavigate()
+  const [voiceIA, setVoiceIA] = useState<number | null>(null)
+  const location = useLocation()
 
   const posts = [
-    { postTitle: "Freela: Portal de noticias", post:  <P.Post>
+    { postTitle: "Freela: Portal de noticias", 
+    post:  <P.Post>
   <G.Paragraph margin='10px 0' fw="bold" fs="25px">Apresentação do Projeto: Desenvolvimento do Portal de Notícias Diretriz</G.Paragraph>
   <G.Paragraph margin='10px 0' fw="500" fs="16px">👉<a href="https://portal-diretriz.vercel.app" target='_blank'>Clique aqui para fazer uma visita</a>👈</G.Paragraph>
   <P.ImageDescription>
@@ -53,7 +59,7 @@ export const ProfilePost = () => {
   { postTitle: "Sports API", post:  
   <P.Post>
     <G.Paragraph margin='10px 0' fw="bold" fs="25px">Sports API</G.Paragraph>
-    <G.Paragraph margin='10px 0' fw="500" fs="16px">👉<a href="https://sportsapi.vercel.app" target='_blank'>Clique aqui para fazer uma visita</a>👈</G.Paragraph>
+    <G.Paragraph margin='10px 0' fw="500" fs="16px">👉<a>MANUTENÇÃO</a>👈</G.Paragraph>
     <P.ImageDescription>
       <P.Image src="https://firebasestorage.googleapis.com/v0/b/galeriadefotos-bd42d.appspot.com/o/sportsapi.png?alt=media&token=ab199315-17ef-4938-93c1-cb8fa09a8d0f"/>
       <G.Paragraph fStyle='italic' fs='13px'>Media de confronto entre times(escanteios,cartões e gols)</G.Paragraph>
@@ -83,10 +89,16 @@ export const ProfilePost = () => {
     <G.Paragraph margin='10px 0' fw='bold' fStyle='italic'>Desafios Futuros</G.Paragraph>
     <G.Paragraph fs="16px" margin='5px 0'>Começar o processo de estilização e adicionar anuncios do google para monetização </G.Paragraph>
   </P.Post>},
-  { postTitle: "Voice IA", post:  
+  { postTitle: "Voice IA ⭐", post:
+  <><P.Post>
+    <P.DateOfUpdate><G.Paragraph margin='2px 0' onClick={()=> setVoiceIA(0)}>Atualizacao do dia: 04/10/2023</G.Paragraph></P.DateOfUpdate>
+    <P.DateOfUpdate><G.Paragraph margin='2px 0' onClick={()=> setVoiceIA(1)}>Atualizacao do dia: 02/04/2024</G.Paragraph></P.DateOfUpdate>
+  </P.Post>  
+  { voiceIA === 0 && 
   <P.Post>
+    <G.Paragraph margin='10px 0' fw="bold" fs="28px">Atualização selecionada do dia 04/10/2023</G.Paragraph>
     <G.Paragraph margin='10px 0' fw="bold" fs="25px">Voice IA</G.Paragraph>
-    <G.Paragraph margin='10px 0' fw="500" fs="16px">👉<a>EM DESENVOLVIMENTO</a>👈</G.Paragraph>
+    <G.Paragraph margin='10px 0' fw="500" fs="16px">👉<a href='https://www.voice-ia.com.br' target='_blank'>Clique aqui para fazer uma visita</a>👈</G.Paragraph>
     <P.ImageDescription>
       <P.Image src="https://firebasestorage.googleapis.com/v0/b/galeriadefotos-bd42d.appspot.com/o/voiceia.png?alt=media&token=132f914c-8468-4b79-8d7b-b5af64ebb3fe"/>
       <G.Paragraph fStyle='italic' fs='13px'>Imagem da pagina do modelo (Printscreen feito em desenvolvimento)</G.Paragraph>
@@ -115,7 +127,108 @@ export const ProfilePost = () => {
     <G.Paragraph margin='10px 0' fw='bold' fStyle='italic'>Desafios Futuros</G.Paragraph>
     <G.Paragraph fs="16px" margin='5px 0'>Estamos no momento em hiato visto que ambos os contribuentes estão atarefados com outros projetos mas continuaremos assim que possivel para podermos lançar esse site 
     na sua melhor forma.</G.Paragraph>
-  </P.Post>},
+  </P.Post>}
+  { voiceIA === 1 && 
+    <P.Post>
+    <G.Paragraph margin='10px 0' fw="bold" fs="28px">Atualização selecionada do dia 02/04/2023</G.Paragraph>
+    <G.Paragraph margin='10px 0' fw="bold" fs="25px">Voice IA</G.Paragraph>
+    <G.Paragraph margin='10px 0' fw="500" fs="16px">👉<a href='https://www.voice-ia.com.br' target='_blank'>Clique aqui para fazer uma visita</a>👈</G.Paragraph>
+    <P.ImageDescription>
+      <P.Image src="https://firebasestorage.googleapis.com/v0/b/galeriadefotos-bd42d.appspot.com/o/Sem%20t%C3%ADtulo.png?alt=media&token=b023a779-08f0-4557-a256-de25ff6f55d1"/>
+      <G.Paragraph fStyle='italic' fs='13px'>Imagem da pagina do modelo</G.Paragraph>
+    </P.ImageDescription>
+    <G.Paragraph margin='10px 0' fw='bold' fStyle='italic'>Visão Geral</G.Paragraph>
+    <G.Paragraph fs="16px" margin='5px 0'>Bom pessoal estamos proximos do lançamento do nosso projeto, tivemos muitas atualizações desde a ultima vez que nos vimos em 2023.</G.Paragraph>
+    <G.Paragraph fs="18px" margin='3px 0'>Atualizações incriveis que tivemos:</G.Paragraph>
+    <G.Paragraph fs="15px" margin='3px 0'><li>Sistema de pagamento com API integrada do mercado pago</li></G.Paragraph>
+    <G.Paragraph fs="15px" margin='3px 0'><li>Possibilidade de criação de contas pelo auth do google</li></G.Paragraph>
+    <G.Paragraph fs="15px" margin='3px 0'><li>Novos modelos com treinos de ate 2k epocas</li></G.Paragraph>
+    <G.Paragraph fs="15px" margin='3px 0'><li>Implementamos uma funcionalidade usando WebSocket para um sistema de fila, na hora de criar seu proprio audio</li></G.Paragraph>
+    <G.Paragraph fs="15px" margin='3px 0'><li>Implementamos também a possibilidade de se escolher se o audio enviado é uma voz feminina ou masc.</li></G.Paragraph>
+    <G.Paragraph fs="15px" margin='3px 0'><li>Disponibilizamos três audios possibilitando, o usuario ter a experiencia de como ficara seu audio antes de gastar sua energia.</li></G.Paragraph>
+    <G.Paragraph fs="15px" margin='3px 0'><li>Foi mudado a forma que hospedamos o servidor, não mais usaremos o AWS EC, por motivos do valor que estavamos recebendo</li></G.Paragraph>
+    <G.Paragraph fs="15px" margin='3px 0'><li>Sistema de Energia integrado ao sistema de planos</li></G.Paragraph>
+    <G.Paragraph fs="15px" margin='3px 0'><li>Usuarios verificados e não verificados</li></G.Paragraph>
+    <>
+      <G.Paragraph margin='10px 0' fw='bold' fs='28px' ta='center' fStyle='italic'>Sistema de Pagamentos usando MercadoPAGO</G.Paragraph>
+      <P.ImageDescription>
+        <P.Image src="https://firebasestorage.googleapis.com/v0/b/galeriadefotos-bd42d.appspot.com/o/Captura%20de%20tela%202024-04-02%20105328.png?alt=media&token=26c7c825-101e-41be-bb7f-f131d5b804c9"/>
+        <G.Paragraph fStyle='italic' fs='13px'>Imagem do modal de quando se seleciona um plano</G.Paragraph>
+      </P.ImageDescription>
+      <P.ImageDescription>
+        <P.Image src="https://firebasestorage.googleapis.com/v0/b/galeriadefotos-bd42d.appspot.com/o/Captura%20de%20tela%202024-04-02%20105416.png?alt=media&token=c9790bf3-3abe-4828-9481-9f5cf498be4b"/>
+        <G.Paragraph fStyle='italic' fs='13px'>Inicio da compra do seu plano</G.Paragraph>
+      </P.ImageDescription>
+      <P.ImageDescription>
+        <P.Image src="https://firebasestorage.googleapis.com/v0/b/galeriadefotos-bd42d.appspot.com/o/Captura%20de%20tela%202024-04-02%20105541.png?alt=media&token=15d7dcf1-abc2-43f0-92ba-b252f4115bb3"/>
+        <G.Paragraph fStyle='italic' fs='13px'>Tudo certo para confirmação do plano</G.Paragraph>
+      </P.ImageDescription>
+      <P.ImageDescription>
+        <P.Image src="https://firebasestorage.googleapis.com/v0/b/galeriadefotos-bd42d.appspot.com/o/Captura%20de%20tela%202024-04-02%20105552.png?alt=media&token=d6ff0ad5-b1de-4d0a-b4ac-caa6fdd1048a"/>
+        <G.Paragraph fStyle='italic' fs='13px'>QRCode e Copia/Cola</G.Paragraph>
+      </P.ImageDescription>
+      <P.ImageDescription>
+        <P.Image src="https://firebasestorage.googleapis.com/v0/b/galeriadefotos-bd42d.appspot.com/o/Captura%20de%20tela%202024-04-02%20105730.png?alt=media&token=45671c15-71f1-4bb7-bd7c-57dceef577e8"/>
+        <G.Paragraph fStyle='italic' fs='13px'>Email que se recebe ao começar um pagamento</G.Paragraph>
+      </P.ImageDescription>
+      <P.ImageDescription>
+        <P.Image src="https://firebasestorage.googleapis.com/v0/b/galeriadefotos-bd42d.appspot.com/o/Captura%20de%20tela%202024-04-02%20110104.png?alt=media&token=607ca495-c61b-4498-8b81-0704c2995f5e"/>
+        <G.Paragraph fStyle='italic' fs='13px'>Confirmação de pagamento</G.Paragraph>
+      </P.ImageDescription>
+    </>
+    <>
+      <G.Paragraph margin='10px 0' fw='bold' fs='28px' ta='center' fStyle='italic'>Possibilidade de criação de contas pelo auth do GOOGLE</G.Paragraph>
+      <P.ImageDescription>
+        <P.Image src="https://firebasestorage.googleapis.com/v0/b/galeriadefotos-bd42d.appspot.com/o/Captura%20de%20tela%202024-04-02%20110321.png?alt=media&token=038b341a-2641-4301-aff8-48d6ae49d6b4"/>
+        <G.Paragraph fStyle='italic' fs='13px'>Modal de Login</G.Paragraph>
+      </P.ImageDescription>
+      <P.ImageDescription>
+        <P.Image src="https://firebasestorage.googleapis.com/v0/b/galeriadefotos-bd42d.appspot.com/o/Captura%20de%20tela%202024-04-02%20110330.png?alt=media&token=ef74bd73-cb85-4078-858f-667d94f4b617"/>
+        <G.Paragraph fStyle='italic' fs='13px'>Sistema de AUTH DO GOOGLE</G.Paragraph>
+      </P.ImageDescription>
+    </>
+    <>
+      <G.Paragraph margin='10px 0' fw='bold' fs='28px' ta='center' fStyle='italic'>Novos modelos com treinos de ate duas mil epocas</G.Paragraph>
+      <P.ImageDescription>
+        <P.Image src="https://firebasestorage.googleapis.com/v0/b/galeriadefotos-bd42d.appspot.com/o/Captura%20de%20tela%202024-04-02%20110921.png?alt=media&token=ee5f032f-e8cb-47f4-9b4b-ed90af6ab6ba"/>
+        <G.Paragraph fStyle='italic' fs='13px'>Novos Modelos</G.Paragraph>
+      </P.ImageDescription>
+      <P.ImageDescription>
+        <P.Image src="https://firebasestorage.googleapis.com/v0/b/galeriadefotos-bd42d.appspot.com/o/Captura%20de%20tela%202024-04-02%20111022.png?alt=media&token=e2b1dd35-4303-4659-8160-4d990566c5e5"/>
+        <G.Paragraph fStyle='italic' fs='13px'>Novos Modelos</G.Paragraph>
+      </P.ImageDescription>
+    </>
+    <>
+      <G.Paragraph margin='10px 0' fw='bold' fs='28px' ta='center' fStyle='italic'>Implementamos uma funcionalidade usando WebSocket para um sistema de fila, na hora de criar seu proprio audio</G.Paragraph>
+      <P.ImageDescription>
+        <P.Image src="https://firebasestorage.googleapis.com/v0/b/galeriadefotos-bd42d.appspot.com/o/Captura%20de%20tela%202024-04-02%20111445.png?alt=media&token=9eeb533a-b0d5-4f83-b87b-8727d5cb061a"/>
+        <G.Paragraph fStyle='italic' fs='13px'>Fila mostrando a posição que o usuario se encontra</G.Paragraph>
+      </P.ImageDescription>
+    </>
+    <>
+      <G.Paragraph margin='10px 0' fw='bold' fs='28px' ta='center' fStyle='italic'>Implementamos também a possibilidade de se escolher se o audio enviado é uma voz feminina ou masc.</G.Paragraph>
+      <P.ImageDescription>
+        <P.Image src="https://firebasestorage.googleapis.com/v0/b/galeriadefotos-bd42d.appspot.com/o/Captura%20de%20tela%202024-04-02%20111741.png?alt=media&token=f79154e0-009d-40ae-bc64-fd01c87f45ec"/>
+        <G.Paragraph fStyle='italic' fs='13px'>Imagem mostrando a possibilidade de escolher entre uma voz feminina ou masculina</G.Paragraph>
+      </P.ImageDescription>
+    </>
+    <>
+      <G.Paragraph margin='10px 0' fw='bold' fs='28px' ta='center' fStyle='italic'>Disponibilizamos três audios possibilitando, o usuario ter a experiencia de como ficará seu audio antes de gastar sua energia.</G.Paragraph>
+      <P.ImageDescription>
+        <P.Image src="https://firebasestorage.googleapis.com/v0/b/galeriadefotos-bd42d.appspot.com/o/Captura%20de%20tela%202024-04-02%20112021.png?alt=media&token=1d6e6157-76f6-4459-b12c-e7f6c61d3741"/>
+        <G.Paragraph fStyle='italic' fs='13px'>Imagem com os três audios gerados</G.Paragraph>
+      </P.ImageDescription>
+    </>
+    <>
+      <G.Paragraph margin='10px 0' fw='bold' fs='28px' ta='center' fStyle='italic'>Sistema de Energia integrado ao sistema de planos</G.Paragraph>
+      <P.ImageDescription>
+        <P.Image src="https://firebasestorage.googleapis.com/v0/b/galeriadefotos-bd42d.appspot.com/o/Captura%20de%20tela%202024-04-02%20112417.png?alt=media&token=1667ddb0-2d07-471b-9275-0d85306f494a"/>
+        <G.Paragraph fStyle='italic' fs='13px'>Sistema de recarga de energia</G.Paragraph>
+      </P.ImageDescription>
+    </>
+
+  </P.Post>}
+  </>},
   { postTitle: "Portfolio com animação 3D", post:  
   <P.Post>
     <G.Paragraph margin='10px 0' fw="bold" fs="25px">Portfolio com animação 3D</G.Paragraph>
@@ -155,11 +268,11 @@ export const ProfilePost = () => {
   { postTitle: "Finanças", post:  
   <P.Post>
     <G.Paragraph margin='10px 0' fw="bold" fs="25px">Finanças</G.Paragraph>
-    <G.Paragraph margin='10px 0' fw="500" fs="16px">👉<a href="finan-front.vercel.app" target='_blank'>Clique aqui para fazer uma visita</a>👈</G.Paragraph>
+    <G.Paragraph margin='10px 0' fw="500" fs="16px">👉<a href="https://finan-front.vercel.app" target='_blank'>Clique aqui para fazer uma visita</a>👈</G.Paragraph>
     <G.Paragraph margin='10px 0' fw='bold' fStyle='italic'>Visão Geral</G.Paragraph>
     <G.Paragraph fs="16px" margin='3px 0'>Este foi um projeto que fiz com o intuito de organizar as finanças de casa e funcionou muito bem apesar de nao estar completo, a ideia do projeto era um 
     app com sistema de finanças somado a ideia de rede social.</G.Paragraph>
-    <G.Paragraph fs="15px" margin='3px 0' fStyle='italic' color="grey">Existe alguns videos em meu linkedin sobre esse projeto confira clicando em <a href="https://www.linkedin.com/in/diogo-lima1408/recent-activity/all/" target='_blank'><span>/link</span></a></G.Paragraph>
+    <G.Paragraph fs="15px" margin='3px 0' fStyle='italic' color="grey">Existe alguns videos em meu linkedin sobre esse projeto confira clicando em <a href="https://www.linkedin.com/in/diogo-lima1408/recent-activity/videos/" target='_blank'><span>/link</span></a></G.Paragraph>
     <G.Paragraph margin='10px 0' fw='bold' fStyle='italic'>Tech Stack</G.Paragraph>
     <G.Paragraph fs="16px" margin='6px 0'>React: Escolhemos o React devido à sua flexibilidade e capacidade de criar interfaces de usuário dinâmicas e responsivas.</G.Paragraph>
     <G.Paragraph fs="16px" margin='6px 0'>Styled Components: Estamos utilizando Styled Components para melhorar a estilização do nosso app.</G.Paragraph>
@@ -264,6 +377,11 @@ export const ProfilePost = () => {
       </P.ProfileDate>
     </P.Profile>
     <P.ProfilePostContent>
+            <P.ProfilePostContentBack>
+              <KeyboardBackspaceIcon onClick={() => navigate(`/${location.state.key}`)} sx={{ color: 'white', width:'32px', height:'32px', cursor:'pointer', '&:hover': {
+                opacity:'0.6'
+              }}}/>
+            </P.ProfilePostContentBack>
             {posts.filter((p) => p.postTitle === PostTitle).map((post) => (
               <PostComponent children={post.post}/>
             ))}

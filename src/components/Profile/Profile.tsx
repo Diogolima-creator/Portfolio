@@ -6,7 +6,10 @@ import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
 import LinkIcon from '@mui/icons-material/Link';
 import CakeIcon from '@mui/icons-material/Cake';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
+import CircularProgress from '@mui/material/CircularProgress';
+import emailjs from '../../services/emailjs';
 import { DarkThemeEnum } from '../../pages/App/types';
+import { useState } from 'react';
 
 type ProfileProps = {
   menuSelected: number
@@ -16,6 +19,9 @@ type ProfileProps = {
 
 export const Profile = ({menuSelected, setMenuSelected, DarkThemeProps}:ProfileProps) => {
 
+  const [loading, setLoading] = useState(false)
+  const [email, setEmail] = useState('')
+
   const socials = [
     {"icon":<BusinessCenterIcon className="iconSocial"/>, "text": "Disponivel"},
     {"icon":<LinkIcon className="iconSocial"/>, "text":<a href="https://linktr.ee/diogolimadev" target="_blank">/links</a>},
@@ -24,6 +30,24 @@ export const Profile = ({menuSelected, setMenuSelected, DarkThemeProps}:ProfileP
   ]
 
   const menu = ['Início', 'Sobre', 'Conteudo']
+
+  async function handleSendEmail () {
+    const serviceId = 'service_9vo3z8s'
+    const templateId = 'template_j7jphqj'
+
+    try {
+      setLoading(true);
+      await emailjs.send(serviceId, templateId, {
+       name: 'Diogo',
+        recipient: email
+      });
+      alert("email enviado com sucesso");
+    } catch (error) {
+      console.log(error);
+    } finally {
+      setLoading(false);
+    }
+  }
 
   return (
     <P.Profile DarkTheme={DarkThemeProps}>
@@ -48,10 +72,10 @@ export const Profile = ({menuSelected, setMenuSelected, DarkThemeProps}:ProfileP
         <P.ProfileEmail>
           <P.EmailContent>
             <G.Paragraph fs="16px">Para entrar em contato comigo, deixe seu email!</G.Paragraph>
-            <P.EmailInput>
-              <P.Input placeholder='Seu endereço de email'></P.Input>
-              <P.Button>Receber!</P.Button>
-            </P.EmailInput>
+            {!loading ? <P.EmailInput>
+              <P.Input placeholder='Seu endereço de email' onChange={(e) => setEmail(e.target.value)}/>
+              <P.Button onClick={() => handleSendEmail()}>Receber!</P.Button>
+            </P.EmailInput> : <CircularProgress sx={{ color: "hsl(320 100% 60%);", margin:"15px 0" }} />}
             <G.Paragraph fs="14px" color="#868E96">Sem spam. O email será enviado uma vez.</G.Paragraph>
           </P.EmailContent>
         </P.ProfileEmail>

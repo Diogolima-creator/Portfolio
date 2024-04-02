@@ -7,11 +7,11 @@ export const Content = () => {
   const navigate = useNavigate()
   
   const lastPosts = [{ link: "Freela: Portal de noticias", date: "Out 2023", from:"Diretriz"},
-  { link: "Sports API", date: "Set 2023", from:"Diogo"},
+  { link: "Sports API", date: "Set 2024", from:"Diogo"},
 ]
 
   const lastCode = [
-    { link: "Voice IA", date: "Ago 2023", from:"Grupo"},
+    { link: "Voice IA ⭐", date: "Ago 2024", from:"Grupo"},
     { link: "Portfolio com animação 3D", date: "Ago 2023", from:"Diogo"},
     { link: "Finanças", date: "Jul 2023", from:"Diogo"},
     { link: "Freela: Portfolio", date: "Jun 2023", from:"Diogo"},
@@ -26,7 +26,7 @@ export const Content = () => {
         <G.Paragraph margin="5px 0" fs="16px">Estes são meus ultimos projetos.</G.Paragraph>
         {lastPosts.map((post) => (
           <>
-            <C.Link onClick={()=> navigate(`/post/${post.link}`)}>{post.link}</C.Link>
+            <C.Link onClick={()=> navigate(`/post/${post.link}`, { state: { key: 'content' }})}>{post.link}</C.Link>
             <G.Paragraph fs="15px" color="#868E96">{post.from}{' - '}{post.date}</G.Paragraph>
           </>
         ))}
@@ -34,7 +34,7 @@ export const Content = () => {
         <G.Paragraph margin="5px 0" fs="16px">Exercitando um pouco da criatividade e colocando em pratica conceitos estudados em projetos pessoais.</G.Paragraph>
         {lastCode.map((post) => (
           <>
-            <C.Link onClick={()=> navigate(`/post/${post.link}`)}>{post.link}</C.Link>
+            <C.Link onClick={()=> navigate(`/post/${post.link}`, { state: { key: 'content' }})}>{post.link}</C.Link>
             <G.Paragraph fs="15px" color="#868E96">{post.from}{' - '}{post.date}</G.Paragraph>
           </>
         ))}

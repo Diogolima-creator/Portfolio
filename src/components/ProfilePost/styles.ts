@@ -138,7 +138,8 @@ export const ProfilePostContent = styled.div`
   margin-top:40px;
   display:flex;
   align-items:center;
-
+  flex-direction:column;
+  
   @media screen and (max-width: 1600px) {
     width:45%;
   }
@@ -170,7 +171,7 @@ export const Post = styled.div`
   flex-direction:Column;
   text-align:justify;
   height:100%;
-
+  min-height:150px;
   a{
     cursor:pointer;
     color:#868E96;
@@ -208,3 +209,20 @@ export const ImageDescription = styled.div`
 `;
 
 
+export const ProfilePostContentBack = styled.div`
+  display:flex;
+  width:100%;
+`;
+
+export const DateOfUpdate = styled.div`
+
+  p{
+    text-decoration:underline;
+    cursor:pointer;
+    transition: 0.5s;
+
+    &:hover{
+      opacity:.6;
+    }
+  }
+`;
