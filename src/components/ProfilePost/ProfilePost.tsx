@@ -362,7 +362,7 @@ export const ProfilePost = () => {
       </P.Banner>
       <P.ProfileDate>
         <P.ProfileHeader>
-            <P.ProfilePicture src="https://firebasestorage.googleapis.com/v0/b/galeriadefotos-bd42d.appspot.com/o/profile.jpg?alt=media&token=38662564-570f-4d05-b1f9-14174afac204"/>
+            <P.ProfilePicture src="../../profile2.jpg"/>
             <P.ProfileButton>Seguir <TwitterIcon sx={{ width:'18px', height:'18px'}}/></P.ProfileButton>
         </P.ProfileHeader>
         <P.ProfileContent>

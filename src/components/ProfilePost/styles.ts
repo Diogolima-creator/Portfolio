@@ -106,11 +106,12 @@ export const ProfileSocial = styled.div`
 
 export const ProfilePicture = styled.img`
   border:4px solid white;
-  height:140px;
-  width:140px;
+  height:150px;
+  width:150px;
   border-radius:90px;
   position:relative;
   top:-35px;
+  object-fit: cover;
   z-index:2;
 `;
 
