@@ -197,7 +197,7 @@ export const FreelaPort =
   </P.ImageDescription>
 </P.Post>}
 
-export const IntegraUFMS = { postTitle: "Integra UFMS", post: 
+export const IntegraUFMS = { postTitle: "Integra UFMS ⭐", post: 
 <P.Post>
   <G.Paragraph margin='10px 0' fw="bold" fs="25px">Integra UFMS - Rooming List</G.Paragraph>
   <G.Paragraph margin='10px 0' fw="500" fs="16px">❌<a target='_blank'>Projeto privado para acesso</a>❌</G.Paragraph>
@@ -247,49 +247,49 @@ export const EngSoft = { postTitle: "Trabalho - Eng Soft", post:
   <P.ImageDescription>
     <P.Video autoPlay muted loop>
       <source type="video/mp4"
-      src="https://firebasestorage.googleapis.com/v0/b/galeriadefotos-bd42d.appspot.com/o/images%2F0718.mp4?alt=media&token=8dde5002-dfce-4384-a882-3a84e019f238"></source>
+      src="/home.mp4"></source>
     </P.Video>
     <G.Paragraph fStyle='italic' fs='13px'>GIF da tela inicial</G.Paragraph>
   </P.ImageDescription>
   <P.ImageDescription>
     <P.Video autoPlay muted loop>
       <source type="video/mp4"
-      src="https://firebasestorage.googleapis.com/v0/b/galeriadefotos-bd42d.appspot.com/o/images%2F0718(1).mp4?alt=media&token=688e7790-53b1-45a0-b0a9-2444d1370786"></source>
+      src="/login.mp4"></source>
     </P.Video>
     <G.Paragraph fStyle='italic' fs='13px'>GIF da tela de login</G.Paragraph>
   </P.ImageDescription>
   <P.ImageDescription>
     <P.Video autoPlay muted loop>
       <source type="video/mp4"
-      src="https://firebasestorage.googleapis.com/v0/b/galeriadefotos-bd42d.appspot.com/o/images%2F0718(2).mp4?alt=media&token=855a3bae-be05-4a73-904a-67c3c003de23"></source>
+      src="/menu.mp4"></source>
     </P.Video>
     <G.Paragraph fStyle='italic' fs='13px'>GIF do menu</G.Paragraph>
   </P.ImageDescription>
   <P.ImageDescription>
     <P.Video autoPlay muted loop>
       <source type="video/mp4"
-      src="https://firebasestorage.googleapis.com/v0/b/galeriadefotos-bd42d.appspot.com/o/images%2F0718(3).mp4?alt=media&token=bd12de7c-e08b-46f5-8642-c46493647ab4"></source>
+      src="/busca.mp4"></source>
     </P.Video>
     <G.Paragraph fStyle='italic' fs='13px'>GIF para busca com sucesso</G.Paragraph>
   </P.ImageDescription>
   <P.ImageDescription>
     <P.Video autoPlay muted loop>
       <source type="video/mp4"
-      src="https://firebasestorage.googleapis.com/v0/b/galeriadefotos-bd42d.appspot.com/o/images%2F0718(4).mp4?alt=media&token=5de90495-f8b4-4e88-854d-53c2e9b25671"></source>
+      src="./buscaerro.mp4"></source>
     </P.Video>
     <G.Paragraph fStyle='italic' fs='13px'>GIF para busca com erro e solicitação do suporte</G.Paragraph>
   </P.ImageDescription>
   <P.ImageDescription>
    <P.Video autoPlay muted loop>
       <source type="video/mp4"
-      src="https://firebasestorage.googleapis.com/v0/b/galeriadefotos-bd42d.appspot.com/o/images%2F0718(5).mp4?alt=media&token=48fd98bd-6404-4e4d-8998-0a5373caaf61"></source>
+      src="./history.mp4"></source>
     </P.Video>
     <G.Paragraph fStyle='italic' fs='13px'>GIF do histórico de alugueis</G.Paragraph>
   </P.ImageDescription>
   <P.ImageDescription>
     <P.Video autoPlay muted loop>
       <source type="video/mp4"
-      src="https://firebasestorage.googleapis.com/v0/b/galeriadefotos-bd42d.appspot.com/o/images%2F0718(6).mp4?alt=media&token=93974dbc-e19f-4831-92d0-bab6c8c42f18"></source>
+      src="./historyreq.mp4"></source>
     </P.Video>
     <G.Paragraph fStyle='italic' fs='13px'>GIF do histórico de requisições ao suporte</G.Paragraph>
   </P.ImageDescription>
