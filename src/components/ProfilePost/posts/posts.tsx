@@ -275,21 +275,21 @@ export const EngSoft = { postTitle: "Trabalho - Eng Soft", post:
   <P.ImageDescription>
     <P.Video autoPlay muted loop>
       <source type="video/mp4"
-      src="./buscaerro.mp4"></source>
+      src="/buscaerro.mp4"></source>
     </P.Video>
     <G.Paragraph fStyle='italic' fs='13px'>GIF para busca com erro e solicitação do suporte</G.Paragraph>
   </P.ImageDescription>
   <P.ImageDescription>
    <P.Video autoPlay muted loop>
       <source type="video/mp4"
-      src="./history.mp4"></source>
+      src="/history.mp4"></source>
     </P.Video>
     <G.Paragraph fStyle='italic' fs='13px'>GIF do histórico de alugueis</G.Paragraph>
   </P.ImageDescription>
   <P.ImageDescription>
     <P.Video autoPlay muted loop>
       <source type="video/mp4"
-      src="./historyreq.mp4"></source>
+      src="/historyreq.mp4"></source>
     </P.Video>
     <G.Paragraph fStyle='italic' fs='13px'>GIF do histórico de requisições ao suporte</G.Paragraph>
   </P.ImageDescription>
