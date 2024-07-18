@@ -199,7 +199,11 @@ export const Post = styled.div`
 `;
 
 export const Image = styled.img`
-  width:100%;
+  max-width:100%;
+`;
+
+export const Video = styled.video`
+  max-width:100%;
 `;
 
 export const ImageDescription = styled.div`
@@ -207,6 +211,10 @@ export const ImageDescription = styled.div`
   flex-direction:Column;
   align-items:center;
   margin:20px 0;
+
+  video{
+   max-width:100%;
+  }
 `;
 
 
