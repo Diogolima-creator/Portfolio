@@ -245,49 +245,49 @@ export const EngSoft = { postTitle: "Trabalho - Eng Soft", post:
   <G.Paragraph fs="16px" margin='6px 0'>Styled Components: Utilizei o styled-components pela questão de ter dominio já na biblioteca</G.Paragraph>
   <G.Paragraph margin='10px 0' fw='bold' fStyle='italic'>GIFS</G.Paragraph>
   <P.ImageDescription>
-    <P.Video autoPlay muted loop>
+    <P.Video autoPlay muted loop preload="auto" controls>
       <source type="video/mp4"
       src="/home.mp4"></source>
     </P.Video>
     <G.Paragraph fStyle='italic' fs='13px'>GIF da tela inicial</G.Paragraph>
   </P.ImageDescription>
   <P.ImageDescription>
-    <P.Video autoPlay muted loop>
+    <P.Video autoPlay muted loop preload="auto" controls>
       <source type="video/mp4"
       src="/login.mp4"></source>
     </P.Video>
     <G.Paragraph fStyle='italic' fs='13px'>GIF da tela de login</G.Paragraph>
   </P.ImageDescription>
   <P.ImageDescription>
-    <P.Video autoPlay muted loop>
+    <P.Video autoPlay muted loop preload="auto" controls>
       <source type="video/mp4"
       src="/menu.mp4"></source>
     </P.Video>
     <G.Paragraph fStyle='italic' fs='13px'>GIF do menu</G.Paragraph>
   </P.ImageDescription>
   <P.ImageDescription>
-    <P.Video autoPlay muted loop>
+    <P.Video autoPlay muted loop preload="auto" controls>
       <source type="video/mp4"
       src="/busca.mp4"></source>
     </P.Video>
     <G.Paragraph fStyle='italic' fs='13px'>GIF para busca com sucesso</G.Paragraph>
   </P.ImageDescription>
   <P.ImageDescription>
-    <P.Video autoPlay muted loop>
+    <P.Video autoPlay muted loop preload="auto" controls>
       <source type="video/mp4"
       src="/buscaerro.mp4"></source>
     </P.Video>
     <G.Paragraph fStyle='italic' fs='13px'>GIF para busca com erro e solicitação do suporte</G.Paragraph>
   </P.ImageDescription>
   <P.ImageDescription>
-   <P.Video autoPlay muted loop>
+   <P.Video autoPlay muted loop preload="auto" controls>
       <source type="video/mp4"
       src="/history.mp4"></source>
     </P.Video>
     <G.Paragraph fStyle='italic' fs='13px'>GIF do histórico de alugueis</G.Paragraph>
   </P.ImageDescription>
   <P.ImageDescription>
-    <P.Video autoPlay muted loop>
+    <P.Video autoPlay muted loop preload="auto" controls>
       <source type="video/mp4"
       src="/historyreq.mp4"></source>
     </P.Video>
