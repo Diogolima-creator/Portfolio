@@ -6,8 +6,19 @@ import { useNavigate } from 'react-router-dom'
 
 export const Feed = () => {
   const navigate = useNavigate()
+  
   const posts = [
     { isPinned: true, name: "Diogo ✨", 
+      date: "18 Jul 2024", 
+      imageProfilePic:"profile2.jpg", 
+      mood:"😁Sentindo Feliz", 
+      paragraph: <><F.Title>Primeiro Projeto Remunerado</F.Title>
+      <G.Paragraph fs="16px">Estou extremamente feliz em poder compartilhar, que estou em um projeto na 
+        faculdade onde recebo uma bolsa desde abril e está sendo uma experiência incrivel, vem conhecer um pouco mais sobre 
+        em <span onClick={()=> navigate('/post/Integra UFMS ⭐', { state: {key: 'feed'}})}>/Integra UFMS</span></G.Paragraph></>,
+      image:"https://firebasestorage.googleapis.com/v0/b/galeriadefotos-bd42d.appspot.com/o/Screenshot%202024-07-14%20230422.png?alt=media&token=21be23aa-59a1-4080-8b62-56aa8f954a6d"
+    },
+    { isPinned: false, name: "Diogo ✨", 
     date: "02 Abr 2024", 
     imageProfilePic:"profile2.jpg", 
     mood:"🔥Sentindo Animado", 
@@ -32,7 +43,7 @@ export const Feed = () => {
     imageProfilePic:"https://firebasestorage.googleapis.com/v0/b/galeriadefotos-bd42d.appspot.com/o/profile.jpg?alt=media&token=38662564-570f-4d05-b1f9-14174afac204", 
     mood:"🙌 Animado", 
     paragraph: <><F.Title>Modelo 3D</F.Title>
-    <G.Paragraph fs="16px">Como eu criei uma função para ditar os movimentos de um modelo 3D do minecraft em um projeto de <a href="post/Portfolio com animação 3D">Portfolio.</a></G.Paragraph></>,
+    <G.Paragraph fs="16px">Como eu criei uma função para ditar os movimentos de um modelo 3D do minecraft em um projeto de <span onClick={()=> navigate('/post/Portfolio com animação 3D', { state: {key: 'feed'}})}>Portfolio.</span></G.Paragraph></>,
     image:undefined, 
     video: "https://firebasestorage.googleapis.com/v0/b/galeriadefotos-bd42d.appspot.com/o/3d.mp4?alt=media&token=1efd0df8-8c4e-485c-a495-0d5cbcc3fe3c"
     }

@@ -29,7 +29,7 @@ export const Profile = ({menuSelected, setMenuSelected, DarkThemeProps}:ProfileP
     {"icon":<CalendarMonthIcon className="iconSocial"/>, "text": "Entrou Out 2023"}
   ]
 
-  const menu = ['Início', 'Sobre', 'Conteudo']
+  const menu = ['Início', 'Sobre', 'Conteúdo']
 
   async function handleSendEmail () {
     const serviceId = 'service_9vo3z8s'
