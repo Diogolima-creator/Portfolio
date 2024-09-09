@@ -9,7 +9,7 @@ export const About = () => {
         👨🏻‍💻💻📚💪
         </G.Paragraph>
         <G.Paragraph margin='7px 0' fs="32px" fw="700">Olá!</G.Paragraph> 
-        <G.Paragraph margin='7px 0' fs="16px" fw="500">Meu nome é Diogo e tenho 21 anos.</G.Paragraph>
+        <G.Paragraph margin='7px 0' fs="16px" fw="500">Meu nome é Diogo e tenho 22 anos.</G.Paragraph>
         <A.Image src="https://firebasestorage.googleapis.com/v0/b/galeriadefotos-bd42d.appspot.com/o/about.jpg?alt=media&token=ec040f2c-3cb4-4038-b01e-91ba7592e4fd"></A.Image>
         <G.Paragraph margin='7px 0' fs="16px" fw="500">Já estou há 4 anos estudando desenvolvimento web, com foco em React e suas modulações. </G.Paragraph>
         <G.Paragraph margin='7px 0' fs="16px" fw="500">Quando tinha 11 anos, fiquei curioso sobre programação e criei um servidor de Minecraft. </G.Paragraph>

@@ -15,7 +15,6 @@ export const Content = () => {
   const lastCode = [
     { link: "Trabalho - Eng Soft", date: "Jun 2024", from:"Diogo"},
     { link: "Integra UFMS ⭐", date: "Abr 2024", from:"Diogo"},
-    { link: "Freela: Portal de noticias", date: "Out 2023", from:"Diretriz"},
     { link: "Sports API", date: "Set 2023", from:"Diogo"},
     { link: "Portfolio com animação 3D", date: "Ago 2023", from:"Diogo"},
     { link: "Finanças ⭐", date: "Jul 2023", from:"Diogo"},
