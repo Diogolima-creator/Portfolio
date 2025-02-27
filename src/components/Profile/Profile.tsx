@@ -29,7 +29,7 @@ export const Profile = ({menuSelected, setMenuSelected, DarkThemeProps}:ProfileP
     {"icon":<CalendarMonthIcon className="iconSocial"/>, "text": "Entrou Out 2023"}
   ]
 
-  const menu = ['Início', 'Sobre', 'Conteúdo']
+  const menu = ['Início', 'Sobre', 'Conteúdo', 'Indicações']
 
   async function handleSendEmail () {
     const serviceId = 'service_9vo3z8s'
@@ -56,11 +56,11 @@ export const Profile = ({menuSelected, setMenuSelected, DarkThemeProps}:ProfileP
       </P.Banner>
       <P.ProfileDate>
         <P.ProfileHeader>
-            <P.ProfilePicture src="profile2.jpg"/>
+            <P.ProfilePicture src="profile4.jpg"/>
             <P.ProfileButton>Seguir <TwitterIcon /></P.ProfileButton>
         </P.ProfileHeader>
         <P.ProfileContent>
-            <P.Title>Diogo Lima <VerifiedIcon sx={{ color: "hsl(320 100% 60%)"}} /></P.Title>
+            <P.Title>Diogo Lima <VerifiedIcon sx={{ color: "var(--roxo);"}} /></P.Title>
             <G.Paragraph>Brings ideas to life with code! ✨</G.Paragraph>
             <G.Paragraph margin='6px 0px'>Junior Web Engineer. Creative Developer.</G.Paragraph>
         </P.ProfileContent>
@@ -75,19 +75,16 @@ export const Profile = ({menuSelected, setMenuSelected, DarkThemeProps}:ProfileP
             {!loading ? <P.EmailInput>
               <P.Input placeholder='Seu endereço de email' onChange={(e) => setEmail(e.target.value)}/>
               <P.Button onClick={() => handleSendEmail()}>Receber!</P.Button>
-            </P.EmailInput> : <CircularProgress sx={{ color: "hsl(320 100% 60%);", margin:"15px 0" }} />}
+            </P.EmailInput> : <CircularProgress sx={{ color: "var(--roxo);", margin:"15px 0" }} />}
             <G.Paragraph fs="14px" color="#868E96">Sem spam. O email será enviado uma vez.</G.Paragraph>
           </P.EmailContent>
         </P.ProfileEmail>
         <P.MenuSelect>
           {menu.map((item, key) => (
-            <P.MenuItem onClick={() => setMenuSelected(key)}>
+            <P.MenuItem DarkTheme={DarkThemeProps} onClick={() => setMenuSelected(key)}>
               <G.Paragraph className={key === menuSelected ? 'selected' : key.toString()} fs="16px" fw="bold">{item}</G.Paragraph>
             </P.MenuItem>
           ))}
-          <P.MenuItem className="disabled">
-              <G.Paragraph  fs="16px" fw="bold">Indicações</G.Paragraph>
-          </P.MenuItem>
         </P.MenuSelect>
       </P.ProfileDate>
     </P.Profile>

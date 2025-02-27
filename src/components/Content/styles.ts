@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 export const Container = styled.div`
   display:flex;
@@ -6,6 +6,10 @@ export const Container = styled.div`
   flex-direction:column;
   height:100%;
   width:100%;
+
+  .aberto{
+    transform: rotate(90deg);
+  }
 `;
 
 export const Content = styled.div`
@@ -43,7 +47,7 @@ export const Content = styled.div`
 `;
 
 export const Link = styled.a`
-  color:hsl(320 100% 60%);
+  color:var(--roxo);
   margin:0;
   cursor:pointer;
   font-size:17px;
@@ -53,4 +57,39 @@ export const Link = styled.a`
   &:hover{
     text-decoration:2px underline;
    }
+`;
+
+const frontMenu = keyframes`
+  0%{
+    height:0;
+    opacity:0;
+  }
+  99%{
+  opacity:0.5;
+  }
+  100%{
+    opacity: 1;
+    height:352px;
+  }
+`;
+
+const backMenu = keyframes`
+  0%{
+    height:0;
+    opacity:0;
+  }
+  100%{
+    opacity: 1;
+    height:176px;
+  }
+`;
+
+export const MenuFront = styled.div`
+  animation: ${frontMenu} 1s;
+  height: 352px; 
+`;
+
+export const MenuBack = styled.div`
+  animation: ${backMenu} 1s;
+  height: 176px; 
 `;

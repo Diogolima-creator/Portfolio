@@ -8,7 +8,18 @@ export const Feed = () => {
   const navigate = useNavigate()
   
   const posts = [
-    { isPinned: true, name: "Diogo ✨", 
+    { isPinned: false, name: "Diogo ✨", 
+      date: "10 Jan 2025", 
+      imageProfilePic:"profile4.jpg", 
+      mood:"🙌Sentindo Grato", 
+      paragraph: <><F.Title>Primeiro Emprego</F.Title>
+      <G.Paragraph fs="16px">
+        Pessoal eu consegui, embora eu esteja escrevendo este post em janeiro, hoje fazem 3 meses desde que consegui meu primeiro emprego. Não tive tempo para escrever sobre isso antes, mas durante essas férias consegui refletir sobre como têm sido esses meses, tudo o que venho aprendendo e as atividades que tenho realizado. 
+        Vem conferir todos os detalhes comigo no post <span onClick={() => navigate('/post/Estagio Evop 💎', { state: { key: 'feed' } })}>/Estágio</span>.
+      </G.Paragraph></>,
+      image:"https://firebasestorage.googleapis.com/v0/b/galeriadefotos-bd42d.appspot.com/o/images%2Flogo.png?alt=media&token=0d976418-ff14-4b47-ba80-3fae8959f649"
+    },
+    { isPinned: false, name: "Diogo ✨", 
       date: "18 Jul 2024", 
       imageProfilePic:"profile2.jpg", 
       mood:"😁Sentindo Feliz", 

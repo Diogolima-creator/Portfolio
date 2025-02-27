@@ -115,7 +115,7 @@ export const ProfileSocials = styled.div`
    
    a{
     text-decoration:none;
-    color:hsl(320 100% 60%);
+    color:var(--roxo);
     font-weight:bold;
     cursor:pointer;
     
@@ -139,7 +139,6 @@ export const ProfilePicture = styled.img`
   border-radius:90px;
   position:relative;
   top:-35px;
-  object-fit: cover;
   z-index:2;
 `;
 
@@ -150,7 +149,7 @@ export const ProfileButton = styled.button`
   font-size:16px;
   font-weight:bold;
   cursor:pointer;
-  background-color:hsl(320 100% 60%);
+  background-color:var(--roxo);
   color:white;
   border:3px solid transparent;
   transition:.15s;
@@ -244,7 +243,7 @@ export const Button = styled.button`
   border:none;
   padding:0px 20px;
   border-radius: 0px 9999px 9999px 0px;
-  background-color:hsl(320 100% 60%);
+  background-color:var(--roxo);
   color:white;
   font-weight:bold;
   font-size:15px;
@@ -276,7 +275,7 @@ export const MenuSelect = styled.div`
   }
 `;
 
-export const MenuItem = styled.div`
+export const MenuItem = styled.div<T.ContainerProps>`
   width:25%;
   display:flex;
   align-items:center;
@@ -285,12 +284,12 @@ export const MenuItem = styled.div`
   transition:.2s;
 
   .selected{
-    border-bottom:4px solid hsl(320 100% 60%);
+    border-bottom:4px solid var(--roxo);
   }
 
   &:hover{
     cursor:pointer;
-    background-color:rgba(255,255,255, .05);
+    background-color: ${props => props.DarkTheme === 'dark' ? 'rgba(255,255,255, .05)' : 'rgba(0,0,0, .05)'};
   }
 
   p{

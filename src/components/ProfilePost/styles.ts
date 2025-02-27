@@ -87,7 +87,7 @@ export const ProfileSocials = styled.div`
 
    a{
     text-decoration:none;
-    color:hsl(320 100% 60%);
+    color:var(--roxo);
     font-weight:bold;
     cursor:pointer;
     
@@ -122,7 +122,7 @@ export const ProfileButton = styled.button`
   font-size:16px;
   font-weight:bold;
   cursor:pointer;
-  background-color:hsl(320 100% 60%);
+  background-color:var(--roxo);
   color:white;
   border:3px solid transparent;
   transition:.15s;
@@ -186,7 +186,7 @@ export const Post = styled.div`
 
   span{
     cursor:pointer;
-    color:hsl(320 100% 60%);
+    color:var(--roxo);
     transition: 0.3s;
     font-weight:bold;
     font-size:16px;

@@ -9,7 +9,7 @@ export const Container = styled.div`
 
   a{
     text-decoration:none;
-    color:hsl(320 100% 60%);
+    color:var(--roxo);
     font-weight:bold;
     cursor:pointer;
     font-style:italic;
@@ -32,7 +32,7 @@ export const Posts = styled.div`
   flex-direction:column;
   align-items:center;
   transition:.3s;
-
+  cursor:default;
   &:hover{
     background-color: rgba(255,255,255,0.1);
   }
@@ -70,6 +70,7 @@ export const Post = styled.div<PostType>`
   display:flex;
   ${props => props.isPinned ? "margin-top:0px" : "margin-top:10px" };
   width:95%;
+  gap:4px;
 `;
 
 export const PostContent = styled.div`
@@ -116,7 +117,7 @@ export const PostText = styled.div`
     font-weight:700;
     cursor:pointer;
     text-decoration:underline;
-    color:hsl(320 100% 60%);
+    color:var(--roxo);
     transition:0.3s;
 
     &:hover{

@@ -7,7 +7,7 @@ import { useParams } from 'react-router-dom';
 export const App = () => {
 
   const { content } = useParams()
-  const [menuSelected, setMenuSelected] = useState(content === 'about' ? 1 : content === 'content' ? 2 : 0 )
+  const [menuSelected, setMenuSelected] = useState(content === 'about' ? 1 : content === 'content' ? 2 : content === 'referral' ? 3 : 0 )
   const [darkTheme, setDarkTheme] = useState(getDarkTheme())
 
   return(

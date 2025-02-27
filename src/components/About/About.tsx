@@ -1,7 +1,10 @@
 import * as A from './styles'
 import * as G from '../../globalStyles/globalStyles'
+import { useNavigate } from 'react-router-dom'
 
 export const About = () => {
+  const navigate = useNavigate();
+
   return (
     <A.Container>
       <A.About>
@@ -20,6 +23,7 @@ export const About = () => {
 Aprendo com facilidade, procuro sempre me esforçar ao máximo para adquirir conhecimento, além de ser comunicativo e pró-ativo. Tenho domínio em HTML, JavaScript, CSS, React.js, Redux, Styled-components, Node.js, Express.js, MongoDB e MySQL (CRUD).
         </G.Paragraph>
       </A.About>
+      <A.Button onClick={() => navigate("/roadmap")}>ROADMAP</A.Button>
     </A.Container>
   )
 }

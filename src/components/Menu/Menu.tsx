@@ -2,6 +2,7 @@ import { DarkThemeEnum } from '../../pages/App/types'
 import { About } from '../About/About'
 import { Content } from '../Content/Content'
 import { Feed } from '../Feed/Feed'
+import { Referrals } from '../Referrals/Referrals'
 import * as M from './styles'
 
 type MenuProps = {
@@ -14,6 +15,7 @@ export const Menu = ({menuSelected, DarkThemeProps}:MenuProps) => {
       {menuSelected === 0 && <Feed/>}
       {menuSelected === 1 && <About/>}
       {menuSelected === 2 && <Content/>}
+      {menuSelected === 3 && <Referrals/>}
     </M.Container>
   )
 }

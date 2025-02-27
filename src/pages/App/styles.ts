@@ -10,8 +10,6 @@ export const Container = styled.div<T.ContainerProps>`
   align-items:center;
   justify-content:center;
   z-index:-2;
-
-
 `;
 
 export const Img = styled.img`
