@@ -8,6 +8,7 @@ import { useState } from 'react';
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import * as G from '../../globalStyles/globalStyles';
 import { PostComponent } from '../PostComponent/PostComponent';
+import { Attachment } from './components/Attachment';
 import { EngSoft, EnsinaGame, Financas, FoodMenu, FreelaPort, FreelaPortalNoticias, IntegraServer, LPFinancas, Organizer, OrganizerServer, PortfolioComAnimação3D, SportApi, VoiceIAServer } from './posts/posts';
 import * as P from './styles';
 
@@ -31,49 +32,56 @@ export const ProfilePost = () => {
         </P.Post>
           {estagioEvop === 0 &&
             <P.Post>
-            <G.Paragraph margin="10px 0" fw="bold" fs="25px">Estágio EVOP - Primeiro Emprego</G.Paragraph>
-            <G.Paragraph margin="10px 0" fw="bold" fStyle="italic">Visão Geral</G.Paragraph>
-            <G.Paragraph fs="16px" margin="3px 0">
-              Olá, pessoal! Escrevo este post com muita felicidade, pois finalmente estou inserido no mundo tech. Depois de tantos anos estudando, fui escolhido e alocado pela equipe do EVOP para ajudar na repaginação do front-end do sistema. Mas não parou por aí: também trabalhei no back-end, solucionando bugs e criando novas funcionalidades.
-            </G.Paragraph>
-            <G.Paragraph fs="16px" margin="3px 0">
-              Quando escrevo este texto, já fazem 3 meses que estou contratado. A cada dia, sinto mais vontade de trabalhar, melhorar e aprender. Por enquanto, é um estágio, mas está sendo uma experiência incrível! Ah, e caso você não tenha visto, tivemos uma atualização no portfólio e estamos mais próximos de completar a primeira parte do nosso <span>/RoadMap</span>. Dá uma conferida lá!
-            </G.Paragraph>
-      
-            <G.Paragraph margin="10px 0" fw="bold" fStyle="italic">Tech Stack</G.Paragraph>
-            <G.Paragraph fs="16px" margin="6px 0">
-              <strong>JSF (Java Server Faces):</strong> O JSF é um framework Java para construção de interfaces web. Ele permite que você crie páginas dinâmicas usando componentes pré-definidos e gerencie o estado da interface de forma eficaz, facilitando a integração entre front-end e back-end.
-            </G.Paragraph>
-            <G.Paragraph fs="16px" margin="6px 0">
-              <strong>PrimeFaces:</strong> PrimeFaces é uma biblioteca de componentes para JSF. Ela traz uma série de componentes de UI prontos para uso, que agilizam o desenvolvimento e garantem uma aparência moderna e responsiva sem que seja necessário criar tudo do zero.
-            </G.Paragraph>
-            <G.Paragraph fs="16px" margin="6px 0">
-              <strong>MySQL com Hibernate:</strong> Usamos o Hibernate como ORM para facilitar a comunicação entre a aplicação JSF e o banco de dados MySQL. O Hibernate mapeia objetos Java para tabelas no banco de forma transparente, simplificando operações de CRUD e garantindo que os dados sejam manipulados de forma consistente.
-            </G.Paragraph>
-      
-            <G.Paragraph margin="10px 0" fw="bold" fStyle="italic">Feitos</G.Paragraph>
-            <G.Paragraph fs="16px" margin="6px 0">
-              Vou compartilhar um pouco sobre as tarefas que já realizei e que ainda faço no EVOP. Mas antes, quero contextualizar vocês sobre o que é o EVOP.
-              Trata-se de um sistema criado para empresas e pessoas físicas que atuam na área de engenharia, com o objetivo de organizar e facilitar a
-              apresentação de projetos.
-              O sistema oferece diversas funcionalidades e a empresa, que está no mercado há cerca de 10 anos e conta com milhares de usuários, desempenha um papel fundamental nesse processo. Sou muito grato por tudo o que o EVOP me proporcionou e continua proporcionando para minha evolução, tanto na carreira quanto como pessoa.
-            </G.Paragraph>
-            <G.Paragraph fs="16px" margin="6px 0">
-              Falando das tarefas: utilizávamos SCRUM como nosso fluxo de trabalho. Meu supervisor atuava como Scrum Master, designando as tarefas para a equipe com base em prioridades, prazos e estimativas. Além disso, fazíamos alinhamentos semanais para acompanhar o progresso e garantir a entrega das atividades.
-            </G.Paragraph>
-            <G.Paragraph fs="16px" margin="6px 0">
-              Bom usávamos o Figma na empresa com a equipe de design, e a partir das telas e modificações propostas, eu era designado para criar ou refatorar interfaces. Além disso, ajudava a equipe a melhorar a escrita do código visto como era um projeto legado, existia muito codigo escrito de forma desgastada ou desatualizada.
-            </G.Paragraph>
-            <G.Paragraph fs="16px" margin="6px 0">
-              Com o tempo, acabei surpreendendo meu supervisor, que passou a me dar tarefas mais envolvendo o back-end. Tornei-me responsável pela criação de diversos filtros com persistência no banco de dados e corrigi funcionalidades que tinham parado de funcionar, como um input de geolocalização.
-            </G.Paragraph>
-            <G.Paragraph fs="16px" margin="6px 0">
-              Também trabalhei com meu supervisor para propor novas ideias, como adicionar um sistema de notificações, melhorar questões de UX/UI e, se possível, criar tutoriais para orientar o usuário na primeira vez que ele interage com alguma funcionalidade ou página.
-            </G.Paragraph>
-          </P.Post>}
+              <G.Paragraph margin="10px 0" fw="bold" fs="25px">Estágio EVOP - Primeiro Emprego</G.Paragraph>
+              <G.Paragraph margin="10px 0" fw="bold" fStyle="italic">Visão Geral</G.Paragraph>
+              <G.Paragraph fs="16px" margin="3px 0">
+                Olá, pessoal! Escrevo este post com muita felicidade, pois finalmente estou inserido no mundo tech. Depois de tantos anos estudando, fui escolhido e alocado pela equipe do EVOP para ajudar na repaginação do front-end do sistema. Mas não parou por aí: também trabalhei no back-end, solucionando bugs e criando novas funcionalidades.
+              </G.Paragraph>
+              <G.Paragraph fs="16px" margin="3px 0">
+                Quando escrevo este texto, já fazem 3 meses que estou contratado. A cada dia, sinto mais vontade de trabalhar, melhorar e aprender. Por enquanto, é um estágio, mas está sendo uma experiência incrível! Ah, e caso você não tenha visto, tivemos uma atualização no portfólio e estamos mais próximos de completar a primeira parte do nosso <span>/RoadMap</span>. Dá uma conferida lá!
+              </G.Paragraph>
+
+              <G.Paragraph margin="10px 0" fw="bold" fStyle="italic">Tech Stack</G.Paragraph>
+              <G.Paragraph fs="16px" margin="6px 0">
+                <strong>JSF (Java Server Faces):</strong> O JSF é um framework Java para construção de interfaces web. Ele permite que você crie páginas dinâmicas usando componentes pré-definidos e gerencie o estado da interface de forma eficaz, facilitando a integração entre front-end e back-end.
+              </G.Paragraph>
+              <G.Paragraph fs="16px" margin="6px 0">
+                <strong>PrimeFaces:</strong> PrimeFaces é uma biblioteca de componentes para JSF. Ela traz uma série de componentes de UI prontos para uso, que agilizam o desenvolvimento e garantem uma aparência moderna e responsiva sem que seja necessário criar tudo do zero.
+              </G.Paragraph>
+              <G.Paragraph fs="16px" margin="6px 0">
+                <strong>MySQL com Hibernate:</strong> Usamos o Hibernate como ORM para facilitar a comunicação entre a aplicação JSF e o banco de dados MySQL. O Hibernate mapeia objetos Java para tabelas no banco de forma transparente, simplificando operações de CRUD e garantindo que os dados sejam manipulados de forma consistente.
+              </G.Paragraph>
+
+              <G.Paragraph margin="10px 0" fw="bold" fStyle="italic">Feitos</G.Paragraph>
+              <G.Paragraph fs="16px" margin="6px 0">
+                Vou compartilhar um pouco sobre as tarefas que já realizei e que ainda faço no EVOP. Mas antes, quero contextualizar vocês sobre o que é o EVOP.
+                Trata-se de um sistema criado para empresas e pessoas físicas que atuam na área de engenharia, com o objetivo de organizar e facilitar a
+                apresentação de projetos.
+                O sistema oferece diversas funcionalidades e a empresa, que está no mercado há cerca de 10 anos e conta com milhares de usuários, desempenha um papel fundamental nesse processo. Sou muito grato por tudo o que o EVOP me proporcionou e continua proporcionando para minha evolução, tanto na carreira quanto como pessoa.
+              </G.Paragraph>
+              <G.Paragraph fs="16px" margin="6px 0">
+                Falando das tarefas: utilizávamos SCRUM como nosso fluxo de trabalho. Meu supervisor atuava como Scrum Master, designando as tarefas para a equipe com base em prioridades, prazos e estimativas. Além disso, fazíamos alinhamentos semanais para acompanhar o progresso e garantir a entrega das atividades.
+              </G.Paragraph>
+              <G.Paragraph fs="16px" margin="6px 0">
+                Bom usávamos o Figma na empresa com a equipe de design, e a partir das telas e modificações propostas, eu era designado para criar ou refatorar interfaces. Além disso, ajudava a equipe a melhorar a escrita do código visto como era um projeto legado, existia muito codigo escrito de forma desgastada ou desatualizada.
+              </G.Paragraph>
+              <G.Paragraph fs="16px" margin="6px 0">
+                Com o tempo, acabei surpreendendo meu supervisor, que passou a me dar tarefas mais envolvendo o back-end. Tornei-me responsável pela criação de diversos filtros com persistência no banco de dados e corrigi funcionalidades que tinham parado de funcionar, como um input de geolocalização.
+              </G.Paragraph>
+              <G.Paragraph fs="16px" margin="6px 0">
+                Também trabalhei com meu supervisor para propor novas ideias, como adicionar um sistema de notificações, melhorar questões de UX/UI e, se possível, criar tutoriais para orientar o usuário na primeira vez que ele interage com alguma funcionalidade ou página.
+              </G.Paragraph>
+            </P.Post>}
           {estagioEvop === 1 &&
             <P.Post>
+              
               <G.Paragraph margin="10px 0" fw="bold" fs="25px">Evoluindo com Propósito</G.Paragraph>
+              <div style={{ display: 'flex', justifyContent: 'flex-end', width: '100%', marginBottom: '15px' }}>
+                <Attachment
+                  text="Relatório"
+                  url="https://firebasestorage.googleapis.com/v0/b/galeriadefotos-bd42d.appspot.com/o/relatorio.pdf?alt=media&token=c93ad569-833c-4118-b5eb-8571613a1e63"
+                />
+              </div>
               <G.Paragraph margin="10px 0" fw="bold" fStyle="italic">Visão Geral</G.Paragraph>
               <G.Paragraph fs="16px" margin="3px 0">
                 Ao olhar para os primeiros meses de 2025 no projeto EVOP, é impossível não reconhecer o quanto minha trajetória desde outubro de 2024 me preparou para encarar com solidez os desafios recentes. Ao longo desse período, fui me aprofundando nas entranhas do sistema, entendendo não só sua arquitetura técnica, mas principalmente o impacto real que ele causa no dia a dia dos usuários. A cada nova entrega, meu objetivo era claro: transformar complexidade em clareza e eficiência.
@@ -260,7 +268,7 @@ export const ProfilePost = () => {
     IntegraServer,
     VoiceIAServer,
     {
-      postTitle: "Integra UFMS ⭐", 
+      postTitle: "Integra UFMS ⭐",
       post:
         <><P.Post>
           <P.DateOfUpdate><G.Paragraph margin='2px 0' onClick={() => setIntegraUfms(0)}>Atualizacao do dia: 04/04/2024</G.Paragraph></P.DateOfUpdate>
@@ -308,11 +316,11 @@ export const ProfilePost = () => {
               <G.Paragraph margin='10px 0' fw="500" fs="16px">❌<a target='_blank'>Projeto privado para acesso</a>❌</G.Paragraph>
               <G.Paragraph margin='10px 0' fw='bold' fStyle='italic'>Visão Geral</G.Paragraph>
               <G.Paragraph fs="16px" margin='5px 0'>
-              Demorei para fazer a atualização, mas vamos lá, pessoal. O evento já passou e nosso sistema foi um sucesso, funcionando da melhor forma possível. Além de economizar tempo, ele também ajudou bastante na organização das planilhas que usamos. Em breve, vou trazer uma última atualização sobre um algoritmo que desenvolvi para criar os anuários de quem participou do evento.
+                Demorei para fazer a atualização, mas vamos lá, pessoal. O evento já passou e nosso sistema foi um sucesso, funcionando da melhor forma possível. Além de economizar tempo, ele também ajudou bastante na organização das planilhas que usamos. Em breve, vou trazer uma última atualização sobre um algoritmo que desenvolvi para criar os anuários de quem participou do evento.
 
-Voltando agora ao projeto: nessa segunda versão, adicionei o que faltava, que era a API do algoritmo implementada no front-end. Uma novidade foi a funcionalidade de backup para o administrador: a cada mudança, é feito um save na nuvem, que fica disponível para o usuário atualizar ou fazer o download do JSON.
+                Voltando agora ao projeto: nessa segunda versão, adicionei o que faltava, que era a API do algoritmo implementada no front-end. Uma novidade foi a funcionalidade de backup para o administrador: a cada mudança, é feito um save na nuvem, que fica disponível para o usuário atualizar ou fazer o download do JSON.
 
-Durante o processo, eu e minha coordenadora vimos algumas funcionalidades que poderiam ser implementadas, como desalocar todos os hóspedes, realizar um desalocamento inteligente e trocar hóspedes usando CSV.
+                Durante o processo, eu e minha coordenadora vimos algumas funcionalidades que poderiam ser implementadas, como desalocar todos os hóspedes, realizar um desalocamento inteligente e trocar hóspedes usando CSV.
               </G.Paragraph>
               <P.ImageDescription>
                 <P.Image src="https://firebasestorage.googleapis.com/v0/b/galeriadefotos-bd42d.appspot.com/o/integra-1.png?alt=media&token=14c2e698-b8cd-4c81-809d-182fcce50a23" />

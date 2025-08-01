@@ -1,23 +1,37 @@
+import { useNavigate } from 'react-router-dom'
+import * as G from '../../globalStyles/globalStyles'
+import { Attachment } from '../ProfilePost/components/Attachment'
+import { Mood } from './components/Mood/Mood'
 import { Pinned } from './components/Pinned/Pinned'
 import * as F from './styles'
-import * as G from '../../globalStyles/globalStyles'
-import { Mood } from './components/Mood/Mood'
-import { useNavigate } from 'react-router-dom'
 
 export const Feed = () => {
   const navigate = useNavigate()
   
-  const posts = [
+    const posts = [
     { isPinned: true, name: "Diogo ✨", 
       date: "07 Jul 2025", 
       imageProfilePic:"profile5.png", 
-      mood:"Sentindo Animado", 
+      mood:"😍 Sentindo Animado", 
       paragraph: <><F.Title>Primeiro Semestre 2025</F.Title>
       <G.Paragraph fs="16px">
       Pessoal, acabei de publicar um novo post contando um pouco sobre como foi meu primeiro semestre de 2025 no projeto EVOP.
       Muita coisa rolou nesses meses — teve bastante aprendizado, desafios técnicos, melhorias importantes no sistema e evoluções no meu estágio também.
       Vem conferir todos os detalhes comigo no post <span onClick={() => navigate('/post/Estagio Evop 💎', { state: { key: 'feed' } })}>/Estágio</span>.
-      </G.Paragraph></>,
+      </G.Paragraph>
+      <G.Paragraph fs="16px" fw="bold" margin="10px 0">
+        🚀 Nova Funcionalidade: Download de Relatórios
+      </G.Paragraph>
+      <G.Paragraph fs="16px">
+        Acabei de implementar uma nova funcionalidade no portfólio! Agora vocês podem baixar/visualizar anexos diretamente dos posts. 
+        Deixei aqui para testar a funcionalidade de download de anexos.
+      </G.Paragraph>
+      <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '15px' }}>
+        <Attachment 
+          text="Relatório EVOP 2025" 
+          url="https://firebasestorage.googleapis.com/v0/b/galeriadefotos-bd42d.appspot.com/o/relatorio.pdf?alt=media&token=c93ad569-833c-4118-b5eb-8571613a1e63"
+        />
+      </div></>,
       image:"profile5.png"
     },
     { isPinned: false, name: "Diogo ✨", 
