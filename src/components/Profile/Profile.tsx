@@ -56,7 +56,7 @@ export const Profile = ({menuSelected, setMenuSelected, DarkThemeProps}:ProfileP
       </P.Banner>
       <P.ProfileDate>
         <P.ProfileHeader>
-            <P.ProfilePicture src="profile4.jpg"/>
+            <P.ProfilePicture src="profile5.png"/>
             <P.ProfileButton>Seguir <TwitterIcon /></P.ProfileButton>
         </P.ProfileHeader>
         <P.ProfileContent>

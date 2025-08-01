@@ -140,6 +140,7 @@ export const ProfilePicture = styled.img`
   position:relative;
   top:-35px;
   z-index:2;
+  object-fit:cover;
 `;
 
 export const ProfileButton = styled.button`

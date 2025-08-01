@@ -1,5 +1,5 @@
-import * as P from '../styles'
 import * as G from '../../../globalStyles/globalStyles'
+import * as P from '../styles'
 
 export const FreelaPortalNoticias = {
   postTitle: "Freela: Portal de noticias",
@@ -315,7 +315,6 @@ export const Evop = {
         Também trabalhei com meu supervisor para propor novas ideias, como adicionar um sistema de notificações, melhorar questões de UX/UI e, se possível, criar tutoriais para orientar o usuário na primeira vez que ele interage com alguma funcionalidade ou página.
       </G.Paragraph>
     </P.Post>
-
 }
 
 export const LPFinancas = {

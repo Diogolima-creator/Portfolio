@@ -8,6 +8,18 @@ export const Feed = () => {
   const navigate = useNavigate()
   
   const posts = [
+    { isPinned: true, name: "Diogo ✨", 
+      date: "07 Jul 2025", 
+      imageProfilePic:"profile5.png", 
+      mood:"Sentindo Animado", 
+      paragraph: <><F.Title>Primeiro Semestre 2025</F.Title>
+      <G.Paragraph fs="16px">
+      Pessoal, acabei de publicar um novo post contando um pouco sobre como foi meu primeiro semestre de 2025 no projeto EVOP.
+      Muita coisa rolou nesses meses — teve bastante aprendizado, desafios técnicos, melhorias importantes no sistema e evoluções no meu estágio também.
+      Vem conferir todos os detalhes comigo no post <span onClick={() => navigate('/post/Estagio Evop 💎', { state: { key: 'feed' } })}>/Estágio</span>.
+      </G.Paragraph></>,
+      image:"profile5.png"
+    },
     { isPinned: false, name: "Diogo ✨", 
       date: "10 Jan 2025", 
       imageProfilePic:"profile4.jpg", 
